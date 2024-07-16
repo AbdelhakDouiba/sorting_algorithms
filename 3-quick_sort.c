@@ -33,6 +33,7 @@ void quick(int *array, size_t size, int from, int to)
 
 /**
 *part_sort - sortign a part of the array
+*@array: array
 *@size: size of the array
 *@from: from where it starts
 *@to: end
