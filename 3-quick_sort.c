@@ -58,6 +58,5 @@ int part_sort(int *array, size_t size, int from, int to)
 	tmp = array[slow];
 	array[slow] = array[i];
 	array[i] = tmp;
-	print_array(array, size);
 	return (slow);
 }
