@@ -48,15 +48,22 @@ int part_sort(int *array, size_t size, int from, int to)
 		if (array[i] < pivot)
 		{
 			slow++;
-			tmp = array[slow];
-			array[slow] = array[i];
-			array[i] = tmp;
-			print_array(array, size);
+			if (array[slow] != array[i])
+			{
+				tmp = array[slow];
+				array[slow] = array[i];
+				array[i] = tmp;
+				print_array(array, size);
+			}
 		}
 	}
 	slow++;
-	tmp = array[slow];
-	array[slow] = array[i];
-	array[i] = tmp;
+	if (array[slow] != array[i])
+	{
+		tmp = array[slow];
+		array[slow] = array[i];
+		array[i] = tmp;
+		print_array(array, size);
+	}
 	return (slow);
 }
